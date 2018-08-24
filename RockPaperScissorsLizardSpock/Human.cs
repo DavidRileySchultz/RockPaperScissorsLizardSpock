@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorsLizardSpock
 {
-    class HumanPlayer
+    class Human : Player
     {
+        //member variables
+
+        //constructors
+
+        //methods
+
+ 
     }
 }

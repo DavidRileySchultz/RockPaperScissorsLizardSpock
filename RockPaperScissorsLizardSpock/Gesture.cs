@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorsLizardSpock
 {
-    class ComputerPlayer
+    class Gesture
     {
+
+
+
+
     }
 }
