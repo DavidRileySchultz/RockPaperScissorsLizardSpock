@@ -25,15 +25,19 @@ namespace RockPaperScissorsLizardSpock
         }
         public void GetPlayers()
         {
+            Console.WriteLine("Please enter 1 to play against a computer or 2 to play against another Human");
+            numberOfPlayers = int.Parse(Console.ReadLine());
+
             if(numberOfPlayers == 1)
             {
                 player1 = new Human();
                 player2 = new Computer();
             }
-            else
+            else if(numberOfPlayers == 2)
             {
                 player1 = new Human();
                 player2 = new Human();
+
             }
         }
 
