@@ -10,8 +10,8 @@ namespace RockPaperScissorsLizardSpock
     {
         static void Main(string[] args)
         {
-            player1.GetPlayerInput();
-            player2.GetPlayerInput();
+            Game RPSLS = new Game();
+            RPSLS.PlayGame();
                       
         }
     }
