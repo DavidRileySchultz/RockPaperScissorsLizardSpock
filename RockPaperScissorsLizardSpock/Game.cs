@@ -11,7 +11,7 @@ namespace RockPaperScissorsLizardSpock
         //member variable
         Player player1;
         Player player2;
-        string rules = "Rules for Rock, Paper, Scissors, Lizard, Spock: \n nScissors cuts Paper \n Paper covers Rock \n Rock crushes Lizard \n Lizard poisons Spock \n Spock smashes Scissors \n Scissors decapitates Lizard \n Lizard eats Paper \n Paper disproves Spock \n Spock vaporizes Rock \n Rock crushes Scissors \n Best of three to win.";
+        string rules = "Rules for Rock, Paper, Scissors, Lizard, Spock: \n Scissors cuts Paper \n Paper covers Rock \n Rock crushes Lizard \n Lizard poisons Spock \n Spock smashes Scissors \n Scissors decapitates Lizard \n Lizard eats Paper \n Paper disproves Spock \n Spock vaporizes Rock \n Rock crushes Scissors \n Best of three to win.";
         int numberOfPlayers;
 
         //constructor
