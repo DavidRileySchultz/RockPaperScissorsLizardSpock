@@ -43,8 +43,12 @@ namespace RockPaperScissorsLizardSpock
             {
                 player1 = new Human();
                 player2 = new Human();
-
             }
+            else
+            {
+                GetPlayers();
+            }
+            
         }
         public void PlayRound()
         {
@@ -120,9 +124,11 @@ namespace RockPaperScissorsLizardSpock
             else if(playAgain == 2)
             {
                 Console.WriteLine("You must be scared...");
-
             }
-
+            else
+            {
+                PlayAgain();
+            }
 
         }
         public void PlayGame()
