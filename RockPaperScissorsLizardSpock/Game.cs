@@ -11,10 +11,10 @@ namespace RockPaperScissorsLizardSpock
         //member variable
         Player player1;
         Player player2;
-        string rules = "Rules for Rock, Scissors, Paper, Lizard, Spock: \n Paper covers Rock \n Scissors cuts Paper \n Rock crushes Lizard \n Lizard poisons Spock \n Spock smashes Scissors \n Scissors decapitates Lizard \n Lizard eats Paper \n Paper disproves Spock \n Spock vaporizes Rock \n Rock crushes Scissors \n Best of three to win. \n Press any key to continue...";
+        string rules = "Rules for Rock, Scissors, Paper, Lizard, Spock: \nPaper covers Rock \nScissors cuts Paper \nRock crushes Lizard \nLizard poisons Spock \nSpock smashes Scissors \nScissors decapitates Lizard \nLizard eats Paper \nPaper disproves Spock \nSpock vaporizes Rock \nRock crushes Scissors \nBest of three to win. \nPress Enter to continue...";
         int numberOfPlayers;
         List<string> gestureList = new List<string>
-            { "The available gestures are:", "Rock", "Scissors", "Paper", "Lizard", "Spock"};
+            {"The available gestures are:", "Rock", "Scissors", "Paper", "Lizard", "Spock"};
         //constructor
 
 

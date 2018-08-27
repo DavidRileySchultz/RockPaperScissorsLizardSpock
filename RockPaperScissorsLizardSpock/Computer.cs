@@ -15,33 +15,33 @@ namespace RockPaperScissorsLizardSpock
         //methods
         public override void GetPlayerInput()
         {
-            Console.WriteLine("Please enter your ATTACK: \n 1) Rock \n 2) Scissors \n 3) Paper \n 4) Lizard \n 5) Spock:");
-            int number = randomGesture.Next(1, 5);
+            Console.WriteLine("The Computer is coming for ya! Look out...");
+            int number = randomGesture.Next(1, 6);
             
                 switch (number)
                 {
                     case 1:
-                        Console.WriteLine("You chose Rock! \n Wait for next player's input...");
+                        Console.WriteLine("The Computer chose Rock!");
                         gesture = 1;                  
                         break;
 
                     case 2:
-                        Console.WriteLine("You chose Scissors! \n Wait for next player's input...");
+                        Console.WriteLine("Computer chose Scissors!");
                         gesture = 2;
                         break;
 
                     case 3:
-                        Console.WriteLine("You chose Paper! \n Wait for next player's input...");
+                        Console.WriteLine("The Computer chose Paper!");
                         gesture = 3;
                         break;
 
                     case 4:
-                        Console.WriteLine("You chose Lizard! \n Wait for next player's input...");
+                        Console.WriteLine("The Computer chose Lizard!");
                         gesture = 4;
                         break;
 
                     case 5:
-                        Console.WriteLine("You chose Spock! \n Wait for next player's input...");
+                        Console.WriteLine("The Computer chose Spock!");
                         gesture = 5;
                         break;
                 }
