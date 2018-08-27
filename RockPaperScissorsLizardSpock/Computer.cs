@@ -9,39 +9,40 @@ namespace RockPaperScissorsLizardSpock
     class Computer : Player
     {
         //member variables
-        Random randomGesture = new Random();
+        
         //constructor
 
         //methods
         public override void GetPlayerInput()
         {
-            Console.WriteLine("The Computer is coming for ya! Look out...");
+            Random randomGesture = new Random();
+            Console.WriteLine($"{name} is coming for ya! Look out...");
             int number = randomGesture.Next(1, 6);
             
                 switch (number)
                 {
                     case 1:
-                        Console.WriteLine("The Computer chose Rock!");
+                        Console.WriteLine($"{name} chose Rock!");
                         gesture = 1;                  
                         break;
 
                     case 2:
-                        Console.WriteLine("Computer chose Scissors!");
+                        Console.WriteLine($"{name} chose Scissors!");
                         gesture = 2;
                         break;
 
                     case 3:
-                        Console.WriteLine("The Computer chose Paper!");
+                        Console.WriteLine($"{name} chose Paper!");
                         gesture = 3;
                         break;
 
                     case 4:
-                        Console.WriteLine("The Computer chose Lizard!");
+                        Console.WriteLine($"{name} chose Lizard!");
                         gesture = 4;
                         break;
 
                     case 5:
-                        Console.WriteLine("The Computer chose Spock!");
+                        Console.WriteLine($"{name} chose Spock!");
                         gesture = 5;
                         break;
                 }
@@ -49,7 +50,8 @@ namespace RockPaperScissorsLizardSpock
 
         public override void GetPlayerName()
         {
-
+            Console.WriteLine("\nPlease enter a name for the Computer");
+            name = Console.ReadLine();
         }
     }
 }

@@ -67,12 +67,14 @@ namespace RockPaperScissorsLizardSpock
                         Console.WriteLine("Please enter a valid input:");
                         break;
                 }
+           
             }
         }
-
         public override void GetPlayerName()
         {
-            
+            Console.WriteLine("\nPlease enter your name:");
+            name = Console.ReadLine();
         }
     }
 }
+    

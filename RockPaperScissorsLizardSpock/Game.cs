@@ -66,35 +66,35 @@ namespace RockPaperScissorsLizardSpock
             if(player1.gesture == 1 && (player2.gesture == 2 || player2.gesture == 4))
             {
                 player1.score += 1;
-                Console.WriteLine("Player 1 Wins This Round!! \nPress (Enter) to move onto next round!");
+                Console.WriteLine(player1.name + " " + "Wins This Round!! \nPress (Enter) to move onto next round!");
                 Console.ReadKey();
                 Console.Clear();
             }
             else if(player1.gesture == 2 && (player2.gesture == 3 || player2.gesture == 4))
             {
                 player1.score += 1;
-                Console.WriteLine("Player 1 Wins This Round!! \nPress (Enter) to move onto next round!");
+                Console.WriteLine(player1.name + " " + "Wins This Round!! \nPress (Enter) to move onto next round!");
                 Console.ReadKey();
                 Console.Clear();
             }
             else if(player1.gesture == 3 && (player2.gesture == 1 || player2.gesture == 5))
             {
                 player1.score += 1;
-                Console.WriteLine("Player 1 Wins This Round!! \nPress (Enter) to move onto next round!");
+                Console.WriteLine(player1.name + " " + "Wins This Round!! \nPress (Enter) to move onto next round!");
                 Console.ReadKey();
                 Console.Clear();
             }
             else if(player1.gesture == 4 && (player2.gesture == 3 || player2.gesture == 5))
             {
                 player1.score += 1;
-                Console.WriteLine("Player 1 Wins This Round!! \nPress (Enter) to move onto next round!");
+                Console.WriteLine(player1.name + " " + "Wins This Round!! \nPress (Enter) to move onto next round!");
                 Console.ReadKey();
                 Console.Clear();
             }
             else if(player1.gesture == 5 && (player2.gesture == 1 || player2.gesture == 2))
             {
                 player1.score += 1;
-                Console.WriteLine("Player 1 Wins This Round!! \nPress (Enter) to move onto next round!");
+                Console.WriteLine(player1.name + " " + "Wins This Round!! \nPress (Enter) to move onto next round!");
                 Console.ReadKey();
                 Console.Clear();
             }
@@ -107,7 +107,7 @@ namespace RockPaperScissorsLizardSpock
             else
             {
                 player2.score += 1;
-                Console.WriteLine("Player 2 Wins This Round!! \nPress (Enter) to move onto next round!");
+                Console.WriteLine(player2.name + " " + "Wins This Round!! \nPress (Enter) to move onto next round!");
                 Console.ReadKey();
                 Console.Clear();
             }
@@ -116,11 +116,11 @@ namespace RockPaperScissorsLizardSpock
         {
             if(player1.score == 2)
             {
-                Console.WriteLine("Player 1 Wins!!");
+                Console.WriteLine(player1.name + " " + "Wins!!");
             }
             else if(player2.score == 2)
             {
-                Console.WriteLine("Player 2 Wins!!!");
+                Console.WriteLine(player2.name + " " + "Wins!!!");
             }
             else
             {
@@ -132,7 +132,7 @@ namespace RockPaperScissorsLizardSpock
 
         public void PlayAgain()
         {
-            Console.WriteLine("Do you want to play again? Press (1) for yes. Press (2) for no.");
+            Console.WriteLine("Do you want to play again? Press (1) for YES. Press (2) for NO.");
             playAgain = int.Parse(Console.ReadLine());
 
             if(playAgain == 1)
