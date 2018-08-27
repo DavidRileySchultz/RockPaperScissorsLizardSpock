@@ -18,5 +18,10 @@ namespace RockPaperScissorsLizardSpock
         {
 
         }
+
+        public virtual void GetPlayerName()
+        {
+
+        }
     }
 }

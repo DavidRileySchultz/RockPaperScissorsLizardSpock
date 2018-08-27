@@ -46,6 +46,11 @@ namespace RockPaperScissorsLizardSpock
                         break;
                 }
         }
+
+        public override void GetPlayerName()
+        {
+
+        }
     }
 }
  

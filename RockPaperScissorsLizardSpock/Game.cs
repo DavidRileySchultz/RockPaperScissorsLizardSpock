@@ -15,7 +15,7 @@ namespace RockPaperScissorsLizardSpock
         int numberOfPlayers;
         int playAgain;
         List<string> gestureList = new List<string>
-            {"The available gestures are:", "Rock", "Scissors", "Paper", "Lizard", "Spock"};
+            {"\nThe available gestures are:", "Rock", "Scissors", "Paper", "Lizard", "Spock"};
         //constructor
 
 
@@ -31,7 +31,7 @@ namespace RockPaperScissorsLizardSpock
         }
         public void GetPlayers()
         {
-            Console.WriteLine("Please enter (1) to play against a Computer or (2) to play against another Human");
+            Console.WriteLine("\nPlease enter (1) to play against a Computer or (2) to play against another Human");
             numberOfPlayers = int.Parse(Console.ReadLine());
 
             if(numberOfPlayers == 1)
@@ -48,8 +48,12 @@ namespace RockPaperScissorsLizardSpock
             {
                 Console.WriteLine("Please enter a valid input:");
                 GetPlayers();
-            }
-            
+            }         
+        }
+        public void SetPlayerName()
+        {
+            player1.GetPlayerName();
+            player2.GetPlayerName();
         }
         public void PlayRound()
         {
@@ -62,36 +66,50 @@ namespace RockPaperScissorsLizardSpock
             if(player1.gesture == 1 && (player2.gesture == 2 || player2.gesture == 4))
             {
                 player1.score += 1;
-                Console.WriteLine("Player 1 Wins Round!!");
+                Console.WriteLine("Player 1 Wins This Round!! \nPress (Enter) to move onto next round!");
+                Console.ReadKey();
+                Console.Clear();
             }
             else if(player1.gesture == 2 && (player2.gesture == 3 || player2.gesture == 4))
             {
                 player1.score += 1;
-                Console.WriteLine("Player 1 Wins Round!!");
+                Console.WriteLine("Player 1 Wins This Round!! \nPress (Enter) to move onto next round!");
+                Console.ReadKey();
+                Console.Clear();
             }
             else if(player1.gesture == 3 && (player2.gesture == 1 || player2.gesture == 5))
             {
                 player1.score += 1;
-                Console.WriteLine("Player 1 Wins Round!!");
+                Console.WriteLine("Player 1 Wins This Round!! \nPress (Enter) to move onto next round!");
+                Console.ReadKey();
+                Console.Clear();
             }
             else if(player1.gesture == 4 && (player2.gesture == 3 || player2.gesture == 5))
             {
                 player1.score += 1;
-                Console.WriteLine("Player 1 Wins Round!!");
+                Console.WriteLine("Player 1 Wins This Round!! \nPress (Enter) to move onto next round!");
+                Console.ReadKey();
+                Console.Clear();
             }
             else if(player1.gesture == 5 && (player2.gesture == 1 || player2.gesture == 2))
             {
                 player1.score += 1;
-                Console.WriteLine("Player 1 Wins Round!!");
+                Console.WriteLine("Player 1 Wins This Round!! \nPress (Enter) to move onto next round!");
+                Console.ReadKey();
+                Console.Clear();
             }
             else if(player1.gesture == player2.gesture)
             {
-                Console.WriteLine("Round Tie!!");
+                Console.WriteLine("Round Tie!!\nPress (Enter) to move onto next round!");
+                Console.ReadKey();
+                Console.Clear();
             }
             else
             {
                 player2.score += 1;
-                Console.WriteLine("Player 2 Wins Round!!");
+                Console.WriteLine("Player 2 Wins This Round!! \nPress (Enter) to move onto next round!");
+                Console.ReadKey();
+                Console.Clear();
             }
         }
         public void CompareScores()
@@ -139,6 +157,7 @@ namespace RockPaperScissorsLizardSpock
             DisplayRules();
             DisplayGestures();
             GetPlayers();
+            SetPlayerName();
             PlayRound();
             CompareGestures();
             CompareScores();
