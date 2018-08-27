@@ -13,6 +13,7 @@ namespace RockPaperScissorsLizardSpock
         Player player2;
         string rules = "Rules for Rock, Scissors, Paper, Lizard, Spock: \nPaper covers Rock \nScissors cuts Paper \nRock crushes Lizard \nLizard poisons Spock \nSpock smashes Scissors \nScissors decapitates Lizard \nLizard eats Paper \nPaper disproves Spock \nSpock vaporizes Rock \nRock crushes Scissors \nBest of three to win. \nPress Enter to continue...";
         int numberOfPlayers;
+        int playAgain;
         List<string> gestureList = new List<string>
             {"The available gestures are:", "Rock", "Scissors", "Paper", "Lizard", "Spock"};
         //constructor
@@ -30,7 +31,7 @@ namespace RockPaperScissorsLizardSpock
         }
         public void GetPlayers()
         {
-            Console.WriteLine("Please enter 1 to play against a computer or 2 to play against another Human");
+            Console.WriteLine("Please enter 1 to play against a Computer or 2 to play against another Human");
             numberOfPlayers = int.Parse(Console.ReadLine());
 
             if(numberOfPlayers == 1)
@@ -105,6 +106,25 @@ namespace RockPaperScissorsLizardSpock
                 CompareScores();
             }
         }
+
+        public void PlayAgain()
+        {
+            Console.WriteLine("Do you want to play again? Press 1 for yes. 2 for no.");
+            playAgain = int.Parse(Console.ReadLine());
+
+            if(playAgain == 1)
+            {
+                Console.WriteLine("Get ready to play another game!!");
+                PlayGame();
+            }
+            else if(playAgain == 2)
+            {
+                Console.WriteLine("You must be scared...");
+
+            }
+
+
+        }
         public void PlayGame()
         {
             DisplayRules();
@@ -113,6 +133,7 @@ namespace RockPaperScissorsLizardSpock
             PlayRound();
             CompareGestures();
             CompareScores();
+            PlayAgain();
             Console.ReadKey();
         }
     }

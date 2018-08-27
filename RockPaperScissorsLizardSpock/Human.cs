@@ -15,7 +15,7 @@ namespace RockPaperScissorsLizardSpock
         //methods
         public override void GetPlayerInput()
         {
-            Console.WriteLine("Please enter your ATTACK: \n1) Rock \n2) Scissors \n3) Paper \n4) Lizard \n5) Spock");
+            Console.WriteLine("Please enter your ATTACK 1-5: \n1) Rock \n2) Scissors \n3) Paper \n4) Lizard \n5) Spock");
 
             bool loopContinue = true;
             while (loopContinue)
