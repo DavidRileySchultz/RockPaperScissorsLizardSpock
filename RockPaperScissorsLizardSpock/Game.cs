@@ -31,7 +31,7 @@ namespace RockPaperScissorsLizardSpock
         }
         public void GetPlayers()
         {
-            Console.WriteLine("Please enter 1 to play against a Computer or 2 to play against another Human");
+            Console.WriteLine("Please enter (1) to play against a Computer or (2) to play against another Human");
             numberOfPlayers = int.Parse(Console.ReadLine());
 
             if(numberOfPlayers == 1)
@@ -57,27 +57,27 @@ namespace RockPaperScissorsLizardSpock
             if(player1.gesture == 1 && (player2.gesture == 2 || player2.gesture == 4))
             {
                 player1.score += 1;
-                Console.WriteLine("Player1 Wins Round!!");
+                Console.WriteLine("Player 1 Wins Round!!");
             }
             else if(player1.gesture == 2 && (player2.gesture == 3 || player2.gesture == 4))
             {
                 player1.score += 1;
-                Console.WriteLine("Player1 Wins Round!!");
+                Console.WriteLine("Player 1 Wins Round!!");
             }
             else if(player1.gesture == 3 && (player2.gesture == 1 || player2.gesture == 5))
             {
                 player1.score += 1;
-                Console.WriteLine("Player1 Wins Round!!");
+                Console.WriteLine("Player 1 Wins Round!!");
             }
             else if(player1.gesture == 4 && (player2.gesture == 3 || player2.gesture == 5))
             {
                 player1.score += 1;
-                Console.WriteLine("Player1 Wins Round!!");
+                Console.WriteLine("Player 1 Wins Round!!");
             }
             else if(player1.gesture == 5 && (player2.gesture == 1 || player2.gesture == 2))
             {
                 player1.score += 1;
-                Console.WriteLine("Player1 Wins Round!!");
+                Console.WriteLine("Player 1 Wins Round!!");
             }
             else if(player1.gesture == player2.gesture)
             {
@@ -86,18 +86,18 @@ namespace RockPaperScissorsLizardSpock
             else
             {
                 player2.score += 1;
-                Console.WriteLine("Player2 Wins Round!!");
+                Console.WriteLine("Player 2 Wins Round!!");
             }
         }
         public void CompareScores()
         {
             if(player1.score == 2)
             {
-                Console.WriteLine("Player1 Wins!!");
+                Console.WriteLine("Player 1 Wins!!");
             }
             else if(player2.score == 2)
             {
-                Console.WriteLine("Player2 Wins!!!");
+                Console.WriteLine("Player 2 Wins!!!");
             }
             else
             {
@@ -109,7 +109,7 @@ namespace RockPaperScissorsLizardSpock
 
         public void PlayAgain()
         {
-            Console.WriteLine("Do you want to play again? Press 1 for yes. 2 for no.");
+            Console.WriteLine("Do you want to play again? Press (1) for yes. Press (2) for no.");
             playAgain = int.Parse(Console.ReadLine());
 
             if(playAgain == 1)
