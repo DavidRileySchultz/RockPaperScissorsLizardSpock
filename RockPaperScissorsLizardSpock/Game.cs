@@ -112,22 +112,17 @@ namespace RockPaperScissorsLizardSpock
                 Console.Clear();
             }
         }
-        public void CompareScores()
+        public void CheckWinner()
         {
             if(player1.score == 2)
             {
                 Console.WriteLine(player1.name + " " + "Wins!!");
             }
-            else if(player2.score == 2)
+            else
             {
                 Console.WriteLine(player2.name + " " + "Wins!!!");
             }
-            else
-            {
-                PlayRound();
-                CompareGestures();
-                CompareScores();
-            }
+            
         }
 
         public void PlayAgain()
@@ -158,9 +153,12 @@ namespace RockPaperScissorsLizardSpock
             DisplayGestures();
             GetPlayers();
             SetPlayerName();
-            PlayRound();
-            CompareGestures();
-            CompareScores();
+            while (player1.score != 2 && player2.score != 2)
+            {
+                PlayRound();
+                CompareGestures();
+            }
+            CheckWinner();
             PlayAgain();
             Console.ReadKey();
         }
