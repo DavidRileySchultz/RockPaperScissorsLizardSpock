@@ -46,6 +46,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else
             {
+                Console.WriteLine("Please enter a valid input:");
                 GetPlayers();
             }
             
@@ -123,10 +124,12 @@ namespace RockPaperScissorsLizardSpock
             }
             else if(playAgain == 2)
             {
-                Console.WriteLine("You must be scared...");
+                Console.WriteLine("You must be scared... \nPress (Enter) to exit game.");
+                Console.ReadKey();
             }
             else
             {
+                Console.WriteLine("Please enter a valid input:");
                 PlayAgain();
             }
 
