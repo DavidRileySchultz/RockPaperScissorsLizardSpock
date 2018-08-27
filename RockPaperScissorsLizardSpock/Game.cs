@@ -11,9 +11,10 @@ namespace RockPaperScissorsLizardSpock
         //member variable
         Player player1;
         Player player2;
-        string rules = "Rules for Rock, Scissors, Paper, Lizard, Spock: \n Paper covers Rock \n Scissors cuts Paper \n Rock crushes Lizard \n Lizard poisons Spock \n Spock smashes Scissors \n Scissors decapitates Lizard \n Lizard eats Paper \n Paper disproves Spock \n Spock vaporizes Rock \n Rock crushes Scissors \n Best of three to win.";
+        string rules = "Rules for Rock, Scissors, Paper, Lizard, Spock: \n Paper covers Rock \n Scissors cuts Paper \n Rock crushes Lizard \n Lizard poisons Spock \n Spock smashes Scissors \n Scissors decapitates Lizard \n Lizard eats Paper \n Paper disproves Spock \n Spock vaporizes Rock \n Rock crushes Scissors \n Best of three to win. \n Press any key to continue...";
         int numberOfPlayers;
-
+        List<string> gestureList = new List<string>
+            { "The available gestures are:", "Rock", "Scissors", "Paper", "Lizard", "Spock"};
         //constructor
 
 
@@ -22,6 +23,10 @@ namespace RockPaperScissorsLizardSpock
         {
             Console.WriteLine(rules);
             Console.ReadKey();
+        }
+        public void DisplayGestures()
+        {
+            gestureList.ForEach(Console.WriteLine);  
         }
         public void GetPlayers()
         {
@@ -40,7 +45,6 @@ namespace RockPaperScissorsLizardSpock
 
             }
         }
-
         public void PlayRound()
         {
             player1.GetPlayerInput();
@@ -100,12 +104,11 @@ namespace RockPaperScissorsLizardSpock
                 CompareGestures();
                 CompareScores();
             }
-
-            
         }
         public void PlayGame()
         {
             DisplayRules();
+            DisplayGestures();
             GetPlayers();
             PlayRound();
             CompareGestures();
