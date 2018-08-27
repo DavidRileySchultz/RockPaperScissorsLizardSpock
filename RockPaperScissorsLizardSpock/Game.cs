@@ -49,27 +49,27 @@ namespace RockPaperScissorsLizardSpock
                
         public void CompareGestures()
         {
-            if(player1.gesture == 1 && (player2.gesture == 3 || player2.gesture == 4))
+            if(player1.gesture == 1 && (player2.gesture == 2 || player2.gesture == 4))
             {
                 player1.score += 1;
                 Console.WriteLine("Player1 Wins Round!!");
             }
-            else if(player1.gesture == 2 && (player2.gesture == 1 || player2.gesture == 5))
+            else if(player1.gesture == 2 && (player2.gesture == 3 || player2.gesture == 4))
             {
                 player1.score += 1;
                 Console.WriteLine("Player1 Wins Round!!");
             }
-            else if(player1.gesture == 3 && (player2.gesture == 2 || player2.gesture == 4))
+            else if(player1.gesture == 3 && (player2.gesture == 1 || player2.gesture == 5))
             {
                 player1.score += 1;
                 Console.WriteLine("Player1 Wins Round!!");
             }
-            else if(player1.gesture == 4 && (player2.gesture == 2 || player2.gesture == 5))
+            else if(player1.gesture == 4 && (player2.gesture == 3 || player2.gesture == 5))
             {
                 player1.score += 1;
                 Console.WriteLine("Player1 Wins Round!!");
             }
-            else if(player1.gesture == 5 && (player2.gesture == 1 || player2.gesture == 3))
+            else if(player1.gesture == 5 && (player2.gesture == 1 || player2.gesture == 2))
             {
                 player1.score += 1;
                 Console.WriteLine("Player1 Wins Round!!");
@@ -101,7 +101,7 @@ namespace RockPaperScissorsLizardSpock
                 CompareScores();
             }
 
-            Console.ReadKey();
+            
         }
         public void PlayGame()
         {
@@ -110,6 +110,7 @@ namespace RockPaperScissorsLizardSpock
             PlayRound();
             CompareGestures();
             CompareScores();
+            Console.ReadKey();
         }
     }
 }
